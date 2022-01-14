@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             CardSwiper(movies: moviesProvider.onDisplayMovies),
+            SizedBox(height: 20),
             MovieSlider(
               movies: moviesProvider.popularMovies,
               title: 'Populares',
