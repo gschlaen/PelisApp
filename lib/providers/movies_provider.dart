@@ -25,6 +25,10 @@ class MoviesProvider extends ChangeNotifier {
   StreamController<List<Movie>> _suggestionStreamController = new StreamController.broadcast();
   Stream<List<Movie>> get suggestionStream => _suggestionStreamController.stream;
 
+  closeStream() {
+    _suggestionStreamController.close();
+  }
+
   MoviesProvider() {
     this.getOnDisplayMovies();
     this.getPopularMovies();
